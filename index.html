@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Defines the document language for SEO and accessibility -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Personal Website</title> <!-- Sets the page title displayed in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links an external CSS file for styling -->
+    <script src="https://kit.fontawesome.com/80a7c348d0.js" crossorigin="anonymous"></script> <!-- Adds Font Awesome icons -->
+</head>
+
+<body>
+<!-- Header section with navigation bar and introductory text -->
+<div id="header"> <!-- 'id' allows specific CSS styling -->
+    <div class="container"> <!-- Container for consistent width and spacing -->
+        <nav> <!-- Navigation bar for the website -->
+            <ul id="sidemenu"> <!-- Unordered list for navigation links -->
+                <li><a href="#header">Home</a></li> <!-- Link to the header section -->
+                <li><a href="#about">About</a></li> <!-- Link to the About section -->
+                <li><a href="#projects">Portfolio</a></li> <!-- Link to the Projects section -->
+                <li><a href="#contact">Contact</a></li> <!-- Link to the Contact section -->
+                <i class="fas fa-times" onclick="closemenu()"></i> <!-- Close button for the menu (JavaScript function) -->
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i> <!-- Hamburger menu icon (JavaScript function) -->
+        </nav>
+        <div class="header-text"> <!-- Section for the introductory text -->
+            <h1>Hello, I'm <span>See Pdrer</span></h1> <!-- Name highlighted with a <span> -->
+            <h3>A Junior Computer Science student at <span>UTD</span></h3> <!-- Brief introduction -->
+        </div>
+    </div>
+</div>
+
+<!-- About Me section -->
+<div id="about">
+    <div class="container">
+        <div class="row"> <!-- Creates a row layout for side-by-side content -->
+            <div class="about-col-1"> <!-- Column for the profile picture -->
+                <img src="images/pictureOne.png"> <!-- Profile picture -->
+            </div>
+            <div class="about-col-2"> <!-- Column for the About Me text -->
+                <h1 class="sub-title">About Me</h1> <!-- Sub-title -->
+                <p class="size">I’m a computer science student at the University of Texas at Dallas with a passion
+                    for software engineering and creating impactful tech solutions. Skilled in Java, 
+                    C++, Python, and web development, I've built projects like an audio-reversing algorithm 
+                    and a contractor-matching web app. My roles in fast-paced environments have sharpened 
+                    my teamwork and adaptability, and I’m actively involved in the ACM and hackathons to 
+                    expand my skills. Enthusiastic about learning, I’m also a music producer and powerlifting fan.</p> <!-- Personal description -->
+
+                <!-- Tab navigation for subsections (Skills, Experience, Education, Hobbies) -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> <!-- JavaScript triggers tab content -->
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('hobby')">Hobbies</p>
+                </div>
+
+                <!-- Tab content for Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>2024 - current</span><br>PISD AVID Tutor</li>
+                        <li><span>2022-2024</span><br>Floor Tech</li>
+                        <li><span>2021</span><br>Whataburger Team Member</li>
+                    </ul>
+                </div>
+
+                <!-- Tab content for Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android/IOS apps</li>
+                    </ul>
+                </div>
+
+                <!-- Tab content for Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2025</span><br>University of Texas at Dallas</li>
+                    </ul>
+                </div>
+
+                <!-- Tab content for Hobbies -->
+                <div class="tab-contents" id="hobby">
+                    <ul>
+                        <li><span>Playing, Making, and Listening to Music</span></li>
+                        <li><span>Powerlifting and Weightlifting</span></li>
+                        <li><span>Making Games and Programming</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects section -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1> <!-- Sub-title -->
+        <div class="projects-list"> <!-- List of projects -->
+            <div>
+                <h2>Bank Simulation</h2> <!-- Project title -->
+                <p>Bank simulations with multiple tellers and customers in Java. The simulation demonstrates synchronization concepts 
+                    and concurrent programming like semaphores and multithreading.</p> <!-- Project description -->
+                <a href="https://github.com/CookingGods/Project-2">Learn more</a> <!-- GitHub link -->
+            </div>
+            <div>
+                <h2>Task Match</h2> <!-- Project title -->
+                <p>This project was a group project that is a web-based task management platform that facilitates seamless task creation, assignment, and management for customers and contractors. 
+                    I helped with UI and UX and solved test cases.</p> <!-- Project description -->
+                <a href="https://github.com/AnishG-git/TaskMatch">Learn more</a> <!-- GitHub link -->
+            </div>
+            <div>
+                <h2>RPG Simulator Game</h2> <!-- Project title -->
+                <p>This project is an action-packed RPG game that is currently a work in progress.</p> <!-- Project description -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"> <!-- Contact information -->
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> seepdrer0@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 469-455-680</p>
+                <div class="social-icons"> <!-- Social media icons -->
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="Resume.pdf" download class="btn btn2">Download Resume</a> <!-- Resume download link -->
+            </div>
+            <div class="contact-right"> <!-- Contact form -->
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span> <!-- Placeholder for form submission message -->
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © SeePdrer</p> <!-- Footer -->
+    </div>
+</div>
+
+<script src="code.js"></script> <!-- Connects the JavaScript file for interactive features -->
+</body>
+</html>
