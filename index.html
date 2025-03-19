@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/80a7c348d0.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -56,20 +57,19 @@
                 <!-- Update your tab links to pass the event object -->
 <!-- Update your tab links to use this alternative approach -->
 <div class="tab-titles">
-    <p class="tab-links active-link" onclick="opentab('skills', this)">Skills</p>
-    <p class="tab-links" onclick="opentab('experience', this)">Experience</p>
-    <p class="tab-links" onclick="opentab('education', this)">Education</p>
-    <p class="tab-links" onclick="opentab('hobby', this)">Hobbies</p>
+    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+    <p class="tab-links" onclick="opentab('education')">Education</p>
+    <p class="tab-links" onclick="opentab('hobby')">Hobbies</p>
+
 </div>
-
-
-                <!-- Tab content for Skills -->
+ <!-- Tab content for Skills -->
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Programming Languages</span>Java, C++, Python, C, C#</li>
+                        <li><span>Programming Languages</span>Java, C++, Python, C, C#, SQL, Assembly </li>
                         <li><span>Web Development</span>HTML/CSS, JavaScript, Node.js, Django</li>
                         <li><span>Database</span>MySQL, PostgreSQL</li>
-                        <li><span>Tools & Technologies</span>Git, AWS, B-tree structures, File I/O</li>
+                        <li><span>Tools & Technologies</span>Git, AWS, Selenium</li>
                         <li><span>Languages</span>Fluent in English and Karen (Myanmar language)</li>
                     </ul>
                 </div>
@@ -87,7 +87,8 @@
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2022 - 2025 (Expected)</span>University of Texas at Dallas - Bachelor of Science in Computer Science</li>
-                        <li><span>Relevant Coursework</span>Operating Systems, Data Structures and Algorithm Analysis, Database Systems, Software Engineering</li>
+                        <li><span>Relevant Coursework</span>Digital Logic, Operating Systems, Data Structures and Algorithm Analysis, Database Systems, Software Engineering, 
+                             Computer Network, Software Testing, Advance Data Stuctures and Algorithm, Programming in UNIX, Programming Language Paradigms, Computer Architecture </li>
                     </ul>
                 </div>
 
@@ -95,8 +96,8 @@
                 <div class="tab-contents" id="hobby">
                     <ul>
                         <li><span>Music</span>Playing, producing, and listening to music</li>
-                        <li><span>Fitness</span>Powerlifting and weightlifting</li>
-                        <li><span>Development</span>Making games and programming personal projects</li>
+                        <li><span>Fitness</span>Powerlifting, Weightlifting, Hiking, Volleyball</li>
+                        <li><span>Development</span>Making games, Automating Tasks and programming personal projects</li>
                     </ul>
                 </div>
             </div>
@@ -126,7 +127,7 @@
             <div class="project-card">
                 <h2>Gym Buddy Discord Bot</h2>
                 <p>A discord bot that help with your fitness journey.</p>
-                <a href="#" class="project-link">Coming Soon <i class="fas fa-arrow-right"></i></a>
+                <h3>Coming Soon </h3>
             </div>
         </div>
     </div>
@@ -175,6 +176,6 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="code.js"></script>
 </body>
 </html>
