@@ -60,6 +60,7 @@ body.dark-mode {
 }
 
 /* For the top header*/
+
 nav {
     display: flex;
     align-items: center;
@@ -177,7 +178,6 @@ nav ul li a:hover::after {
     background: linear-gradient(rgba(67, 67, 67, 1), rgba(12, 6, 6, 0.8)), url('images/bg-pattern.png');
 }
 
-
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -194,7 +194,7 @@ nav ul li a:hover::after {
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-70%);
 }
 
 .row {
@@ -283,6 +283,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents.active-tab {
+    color: white;
     display: block;
     animation: fadeIn 0.5s;
 }
@@ -317,6 +318,8 @@ nav ul li a:hover::after {
     display: block;
     margin-bottom: 5px;
 }
+
+
 
 /* Projects Section */
 #projects {
@@ -359,6 +362,7 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
     min-height: 100px;
 }
+
 
 .project-link {
     display: inline-block;
@@ -544,7 +548,7 @@ footer {
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
     nav ul {
-        background: var(--dark-color);
+        background: rgba(0, 0, 0, 0.95); /* Change from var(--dark-color) to semi-transparent black */
         position: fixed;
         top: 0;
         right: -200px;
@@ -559,6 +563,7 @@ footer {
     nav ul li {
         display: block;
         margin: 15px 0;
+        padding-left: 20px; 
     }
 
     nav ul .fas {
@@ -566,14 +571,14 @@ footer {
         top: 25px;
         left: 25px;
         cursor: pointer;
-        color: var(--light-color);
+        color: white;
     }
 
     nav .fas {
         display: block;
         font-size: 20px;
         cursor: pointer;
-        color: var(--light-color);
+        color: white;
     }
 
     .header-text h1 {
