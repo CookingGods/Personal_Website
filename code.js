@@ -4,20 +4,22 @@ var tabcontents = document.getElementsByClassName("tab-contents"); // Collects a
 
 // Function to switch between tabs when clicked
 function opentab(tabname) {
-    // Loop through all tab links and remove the "active-link" class
+    // Get all tab links and tab content sections
+    // Remove the "active-link" class from all tab links
     for (tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
-    // Loop through all tab contents and remove the "active-tab" class
+
+    // Remove the "active-tab" class from all tab contents
     for (tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
-    
-    // Add the "active-link" class to the clicked tab link
-    event.currentTarget.classList.add("active-link");
-    // Add the "active-tab" class to the corresponding tab content
+    // Add "active-link" class to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+    // Add "active-tab" class to the corresponding tab content
     document.getElementById(tabname).classList.add("active-tab");
 }
+
 
 // Variable to hold the side menu element for small screens
 var sidemenu = document.getElementById("sidemenu");
