@@ -1,6 +1,8 @@
+// All previous JavaScript code remains the same
+
 // Variables to hold tab navigation links and tab content elements
-var tablinks = document.getElementsByClassName("tab-links"); // Collects all elements with the class "tab-links"
-var tabcontents = document.getElementsByClassName("tab-contents"); // Collects all elements with the class "tab-contents"
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
 // Function to switch between tabs when clicked
 function opentab(tabname) {
@@ -58,4 +60,84 @@ form.addEventListener('submit', e => {
             form.reset();
         })
         .catch(error => console.error('Error!', error.message)); // Logs any errors in the console
+});
+
+// Project Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const carousels = document.querySelectorAll('.project-carousel');
+    
+    carousels.forEach(function(carousel) {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+        const nextButton = carousel.querySelector('.next');
+        const prevButton = carousel.querySelector('.prev');
+        const indicators = carousel.querySelector('.carousel-indicators');
+        
+        let currentIndex = 0;
+        const slideWidth = 100; // Percentage width of each slide
+        
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (index === 0) indicator.classList.add('active');
+            
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+            });
+            
+            indicators.appendChild(indicator);
+        });
+        
+        const indicatorDots = Array.from(indicators.querySelectorAll('.indicator'));
+        
+        // Set up the carousel
+        function setSlidePosition() {
+            track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            
+            // Update indicators
+            indicatorDots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            setSlidePosition();
+        }
+        
+        // Event listeners for buttons
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            setSlidePosition();
+        });
+        
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            setSlidePosition();
+        });
+        
+        function setSlidePosition() {
+            track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        
+            // Update indicators
+            indicatorDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        
+            // Pause all videos (REMOVE THIS LINE)
+            // document.querySelectorAll('.carousel-slide video').forEach(video => video.pause());
+        
+            // Play the video in the active slide (if it exists)
+            let activeVideo = slides[currentIndex].querySelector('video');
+            if (activeVideo) {
+                activeVideo.play();
+            }
+        }        
+     
+    });
 });
