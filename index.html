@@ -1,273 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="See Pdrer - Computer Science Student at UTD | Software Engineer | Full Stack Developer">
-    <meta name="keywords" content="See Pdrer, UTD, Computer Science, Software Engineer, Web Developer, Portfolio">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See Pdrer - Computer Science Student at UTD | Software Engineer | Full Stack Developer"
+    />
+    <meta
+      name="keywords"
+      content="See Pdrer, UTD, Computer Science, Software Engineer, Web Developer, Portfolio"
+    />
     <title>See Pdrer | Computer Science Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/80a7c348d0.js" crossorigin="anonymous"></script>
-    
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/80a7c348d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-<!-- Header section with navigation bar -->
-<div id="header">
-    <div class="container">
+  <body>
+    <!-- Header section with navigation bar -->
+    <div id="header">
+      <div class="container">
         <nav>
-            <a href="#" class="logo">See<span>Pdrer</span></a>
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+          <a href="#" class="logo">See<span>Pdrer</span></a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <h1>Hello, I'm <span>See Pdrer</span></h1>
-            <h3>Computer Science Student at <span>UTD</span></h3>
-            <p>I'm passionate about software engineering and Software Quality Assurance Automation and creating impactful tech solutions. Currently seeking internship opportunities.</p>
-            <a href="#contact" class="header-btn">Get In Touch</a>
+          <h1>Hello, I'm <span>See Pdrer</span></h1>
+          <h3>Computer Science Student at <span>UTD</span></h3>
+          <p>
+            I'm passionate about software engineering and Software Quality
+            Assurance Automation and creating impactful tech solutions.
+            Currently seeking Junior Software Egineering role or a Junior QA
+            Automation/Manual role .
+          </p>
+          <a href="#contact" class="header-btn">Get In Touch</a>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- About Me section -->
-<div id="about">
-    <div class="container">
+    <!-- About Me section -->
+    <div id="about">
+      <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="row">
-            <div class="about-col-1">
-                <img src="images/pictureOne.png" alt="See Pdrer profile photo">
+          <div class="about-col-1">
+            <img src="images/pictureOne.png" alt="See Pdrer profile photo" />
+          </div>
+          <div class="about-col-2">
+            <h3 class="sub-title">My Journey</h3>
+            <p class="about-text">
+              I'm See PDrer, an aspiring Software Developer and Automation Test
+              Engineer studying Computer Science at the University of Texas at
+              Dallas (graduating December 2025). With expertise in Java, Python,
+              C++, and many more, I apply meticulous testing and problem-solving
+              skills to ensure software reliability while also pursuing my
+              passion for software development. I'm passionate about creating
+              better, more reliable software and always eager to learn new
+              technologies. Let's connect and build something amazing together!
+            </p>
+
+            <!-- Tab navigation for subsections -->
+
+            <!-- Update your tab links to use this alternative approach -->
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('hobby')">Hobbies</p>
             </div>
-            <div class="about-col-2">
-                <h3 class="sub-title">My Journey</h3>
-                <p class="about-text">I'm See PDrer, an aspiring Software Developer and Automation Test Engineer studying Computer Science at the University of Texas at Dallas (graduating December 2025). 
-                    With expertise in Java, Python, C++, and many more, I apply meticulous testing and problem-solving skills to ensure software reliability while also pursuing my passion for software development. 
-                    I'm passionate about creating better, more reliable software and always eager to learn new technologies. 
-                    Let's connect and build something amazing together!</p>
-
-                <!-- Tab navigation for subsections -->
-               
-<!-- Update your tab links to use this alternative approach -->
-<div class="tab-titles">
-    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-    <p class="tab-links" onclick="opentab('education')">Education</p>
-    <p class="tab-links" onclick="opentab('hobby')">Hobbies</p>
-
-</div>
- <!-- Tab content for Skills -->
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming Languages</span>Java, C++, Python, C, C#, SQL, Assembly </li>
-                        <li><span>Web Development</span>HTML/CSS, JavaScript, Node.js, Django</li>
-                        <li><span>Database</span>MySQL, PostgreSQL</li>
-                        <li><span>Tools & Technologies</span>Git, AWS, Selenium</li>
-                        <li><span>Languages</span>Fluent in English and Karen (Myanmar language)</li>
-                    </ul>
-                </div>
-
-                <!-- Tab content for Experience -->
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2024 - Present</span>PISD AVID Tutor - Guiding students in critical thinking and academic skills</li>
-                        <li><span>2022 - 2024</span>Floor Tech at Flagship Facility - Operating and maintaining floor care equipment with attention to quality standards</li>
-                        <li><span>2021</span>Whataburger Team Member - Collaborated with teams to meet operational goals</li>
-                    </ul>
-                </div>
-
-                <!-- Tab content for Education -->
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2022 - 2025 (Expected)</span>University of Texas at Dallas - Bachelor of Science in Computer Science</li>
-                        <li><span>Relevant Coursework</span>Digital Logic, Operating Systems, Data Structures and Algorithm Analysis, Database Systems, Software Engineering, 
-                             Computer Network, Software Testing, Advance Data Stuctures and Algorithm, Programming in UNIX, Programming Language Paradigms, Computer Architecture </li>
-                    </ul>
-                </div>
-
-                <!-- Tab content for Hobbies -->
-                <div class="tab-contents" id="hobby">
-                    <ul>
-                        <li><span>Music</span>Playing, producing, and listening to music</li>
-                        <li><span>Fitness</span>Powerlifting, Weightlifting, Hiking, Volleyball</li>
-                        <li><span>Development</span>Making games, Automating Tasks and programming personal projects</li>
-                    </ul>
-                </div>
+            <!-- Tab content for Skills -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Programming Languages</span> JavaScript, TypeScript,
+                  Java, Python, C++, C#, HTML/CSS,
+                </li>
+                <li>
+                  <span>Frameworks/Libraries</span> React, React Native,
+                  Node.js, Express, Next.js, Tailwind CSS, LangChain, OpenAI
+                  API, VSCode Extension Development
+                </li>
+                <li>
+                  <span>Cloud/ Databases/DevOps</span> MySQL, PostgreSQL, Redis,
+                  AWS(ECS, SSO, CLI, SDK), Git/GitHub, CI/CD (GitHub Actions,
+                  Jenkins - learning)
+                </li>
+                <li>
+                  <span> Testing QA</span> Playwright, PyTest, Postman,
+                  Selenium(familiar), JIRA(ticket triage), TestRail(familiar),
+                  JUnit, JMeter, Manual Testing, API Testing, End-to-End &
+                  Regression Testing, Cross-Browser Testing
+                </li>
+                <li>
+                  <span> Software development </span> Full-Stack Development,
+                  API Design, System Design, CI/CD, Agile/Scrum, Frontend
+                  Development
+                </li>
+                <li>
+                  <span> Practices</span> Agile/Scrum, SDLC, BRD/TRD
+                  documentation
+                </li>
+                <li>
+                  <span>Languages</span>Fluent in English and Karen (Myanmar
+                  language)
+                </li>
+              </ul>
             </div>
+
+            <!-- Tab content for Experience -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2025 Aug - Present</span>
+                  <strong>BBQ Chicken Server</strong> — Serving guests with
+                  speed and a smile, managing orders and keeping the dining area
+                  organized during busy shifts.
+                </li>
+                <li>
+                  <span>2025 Jun - 2025 Aug</span>
+                  <strong>
+                    Agility Holding Groups - 834 Application Developer Intern —
+                    Devel</strong
+                  >
+                  — Built and automated business apps using Zoho tools (CRM,
+                  Creator, API) and improved processes in an Agile environment.
+                </li>
+                <li>
+                  <span>2024 Dec - 2025 Jun</span>
+                  <strong>PISD AVID Tutor</strong> — Guiding students in
+                  critical thinking, study skills, and college prep through
+                  one-on-one and group sessions.
+                </li>
+                <li>
+                  <span>2022 Jul - 2024 Jul</span>
+                  <strong>Floor Tech — Flagship Facility</strong> — Operated and
+                  maintained floor-care equipment, upheld cleanliness standards,
+                  and helped streamline maintenance workflows.
+                </li>
+                <li>
+                  <span>2021 Jul - 2021 Oct</span>
+                  <strong>Whataburger Team Member</strong> — Handled fast-paced
+                  front and back-of-house tasks, delivered friendly customer
+                  service, and collaborated with teammates to meet targets.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tab content for Education -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022 Aug - 2025 Dec </span>University of Texas at Dallas
+                  - Bachelor of Science in Computer Science
+                </li>
+                <li>
+                  <span>Relevant Coursework</span>Digital Logic, Operating
+                  Systems, Data Structures and Algorithm Analysis, Database
+                  Systems, Software Engineering, Computer Network, Software
+                  Testing, Advance Data Stuctures and Algorithm, Programming in
+                  UNIX, Programming Language Paradigms, Computer Architecture,
+                  Computer Human Intereaction,
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tab content for Hobbies -->
+            <div class="tab-contents" id="hobby">
+              <ul>
+                <li>
+                  <span>Music</span>Playing, producing, and listening to music
+                </li>
+                <li>
+                  <span>Fitness</span>Powerlifting, Weightlifting, Hiking,
+                  Volleyball
+                </li>
+                <li>
+                  <span>Development</span>Making games, Automating Tasks and
+                  programming personal projects
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- Projects section -->
-<div id="projects">
-    <div class="container">
+    <!-- Projects section -->
+    <div id="projects">
+      <div class="container">
         <h2 class="section-title">My Projects</h2>
+
         <div class="projects-list">
-            <!-- Snap AI Project -->
-            <div class="project-card">
-                <div class="project-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-track">
-                            <!-- First slide with project info -->
-                            <div class="carousel-slide info-slide">
-                                <div class="project-info">
-                                    <h2>Snap AI</h2>
-                                    <p>Doctor Snap is an innovative app that allows users to identify injuries by analyzing a photo. Using AI technology, the app provides real-time feedback and potential diagnoses based on image recognition. It also includes an emergency feature for immediate assistance.
-                                        In addition, it also have a feature that directy pinpoint you to the nearest ER, and as well as a Medical Chatbot that user can use to intereact with.
-                                    </p>
-                                    <a href="https://github.com/CookingGods/AXXESS_Hackthon_Project_2-17-2025" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- Image slides with actual screenshots -->
-                            <div class="carousel-slide">
-                                <div class="screenshot-container">
-                                    <img src="images/Pic3.png" alt="Snap AI Chat Interface">
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <div class="screenshot-container">
-                                    <img src="images/pic2.png" alt="Snap AI Emergency Call Feature">
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <div class="screenshot-container">
-                                    <img src="images/Pic1.png" alt="Snap AI Health Tips">
-                                </div>
-                            </div>
-                            <!-- Video slide -->
-                            <div class="carousel-slide video-slide">
-                                <div class="screenshot-container">
-                                    <video controls>
-                                        <source src="images/SnapAI.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-button prev">&#10094;</button>
-                        <button class="carousel-button next">&#10095;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Task Match Project (Updated for web application display) -->
-<div class="project-card">
-    <div class="project-carousel">
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <!-- First slide with project info -->
-                <div class="carousel-slide info-slide">
+          <!-- Task Match Project (Updated for web application display) -->
+          <div class="project-card">
+            <div class="project-carousel">
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <!-- First slide with project info -->
+                  <div class="carousel-slide info-slide">
                     <div class="project-info">
-                        <h2>Task Match</h2>
-                        <p>A full-stack app that streamlines task creation, assignment, and collaboration between customers and contractors. 
-                            Customers use a calendar interface to create and manage tasks, search for nearby contractors by category, and get matched accordingly. 
-                            Contractors can view tasks, update profiles, and manage availability—like Tinder for personal projects.</p>
-                        <a href="https://github.com/AnishG-git/TaskMatch" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                      <h2>Task Match</h2>
+                      <p>
+                        A full-stack app that streamlines task creation,
+                        assignment, and collaboration between customers and
+                        contractors. Customers use a calendar interface to
+                        create and manage tasks, search for nearby contractors
+                        by category, and get matched accordingly. Contractors
+                        can view tasks, update profiles, and manage
+                        availability—like Tinder for personal projects.
+                      </p>
+                      <a
+                        href="https://github.com/AnishG-git/TaskMatch"
+                        class="project-link"
+                        >View Project <i class="fas fa-arrow-right"></i
+                      ></a>
                     </div>
-                </div>
-                <!-- Web application screenshots in desktop frame -->
-                <div class="carousel-slide">
+                  </div>
+                  <!-- Web application screenshots in desktop frame -->
+                  <div class="carousel-slide">
                     <div class="desktop-screenshot-container">
-                        <img src="images/TaskMatch_PIC1.png" alt="Task Match Screenshot 1">
+                      <img
+                        src="images/TaskMatch_PIC1.png"
+                        alt="Task Match Screenshot 1"
+                      />
                     </div>
-                </div>
-                <div class="carousel-slide">
+                  </div>
+                  <div class="carousel-slide">
                     <div class="desktop-screenshot-container">
-                        <img src="images/TaskMatch_PIC2.png" alt="Task Match Screenshot 2">
+                      <img
+                        src="images/TaskMatch_PIC2.png"
+                        alt="Task Match Screenshot 2"
+                      />
                     </div>
-                </div>
-                <div class="carousel-slide">
+                  </div>
+                  <div class="carousel-slide">
                     <div class="desktop-screenshot-container">
-                        <img src="images/TaskMatch_PIC3.png" alt="Task Match Screenshot 3">
+                      <img
+                        src="images/TaskMatch_PIC3.png"
+                        alt="Task Match Screenshot 3"
+                      />
                     </div>
-                </div>
-                <!-- Video slide -->
-                <div class="carousel-slide video-slide">
+                  </div>
+                  <!-- Video slide -->
+                  <div class="carousel-slide video-slide">
                     <div class="desktop-screenshot-container">
-                        <video controls>
-                            <source src="images/TaskMatch_Video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                      <video controls>
+                        <source
+                          src="images/TaskMatch_Video.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
                     </div>
+                  </div>
                 </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <div class="carousel-indicators"></div>
+              </div>
             </div>
-            <button class="carousel-button prev">&#10094;</button>
-            <button class="carousel-button next">&#10095;</button>
-            <div class="carousel-indicators"></div>
-        </div>
-    </div>
-</div>
-            
-            <!-- Gym Buddy Project -->
-            <div class="project-card">
-                <div class="project-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-track">
-                            <!-- First slide with project info -->
-                            <div class="carousel-slide info-slide">
-                                <div class="project-info">
-                                    <h2>Gym Buddy Discord Bot</h2>
-                                    <p>A discord bot that help with your fitness journey.</p>
-                                    <h3>Coming Soon</h3>
-                                </div>
-                            </div>
+          </div>
+          <!-- Snap AI Project -->
+          <div class="project-card">
+            <div class="project-carousel">
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <!-- First slide with project info -->
+                  <div class="carousel-slide info-slide">
+                    <div class="project-info">
+                      <h2>Snap AI</h2>
+                      <p>
+                        Doctor Snap is an innovative app that allows users to
+                        identify injuries by analyzing a photo. Using AI
+                        technology, the app provides real-time feedback and
+                        potential diagnoses based on image recognition. It also
+                        includes an emergency feature for immediate assistance.
+                        In addition, it also has a feature that directly
+                        pinpoints you to the nearest ER, as well as a Medical
+                        Chatbot that users can interact with.
+                      </p>
+                      <a
+                        href="https://github.com/CookingGods/AXXESS_Hackthon_Project_2-17-2025"
+                        class="project-link"
+                        >View Project <i class="fas fa-arrow-right"></i
+                      ></a>
                     </div>
+                  </div>
+
+                  <!-- Image slides with actual screenshots -->
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img src="images/Pic3.png" alt="Snap AI Chat Interface" />
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img
+                        src="images/pic2.png"
+                        alt="Snap AI Emergency Call Feature"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img src="images/Pic1.png" alt="Snap AI Health Tips" />
+                    </div>
+                  </div>
+
+                  <!-- Video slide -->
+                  <div class="carousel-slide video-slide">
+                    <div class="screenshot-container">
+                      <video controls>
+                        <source src="images/SnapAI.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
                 </div>
+
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <div class="carousel-indicators"></div>
+              </div>
             </div>
+          </div>
+
+          <!-- Rainbow Teashop App Project -->
+          <div class="project-card">
+            <div class="project-carousel">
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <!-- First slide with project info -->
+                  <div class="carousel-slide info-slide">
+                    <div class="project-info">
+                      <h2>Rainbow Teashop App</h2>
+                      <p>
+                        A cross-platform mobile ordering application built with
+                        React Native and Node.js that lets customers place and
+                        track orders in real time. It includes secure
+                        Stripe-powered payments, loyalty rewards, and order
+                        history, giving users a seamless café experience right
+                        from their phones.
+                      </p>
+                      <a
+                        href="https://github.com/CookingGods/RainbowTeaShop"
+                        class="project-link"
+                        >View Project <i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <!-- Image slides with actual screenshots -->
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img
+                        src="images/RainbowTeaShop_PIC2.png"
+                        alt="Rainbow Tea shop landing Page"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img
+                        src="images/RainbowTeaShop_PIC3.png"
+                        alt="Rainbow Tea Rewards Page"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img
+                        src="images/RainbowTeaShop_PIC1.png"
+                        alt="Rainbow Teashop Setting Page"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <div class="screenshot-container">
+                      <img
+                        src="images/RainbowTeaShop_PIC4.png"
+                        alt="Rainbow Teashop Task login Page"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <div class="carousel-indicators"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gym Buddy Project -->
+          <div class="project-card">
+            <div class="project-carousel">
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <!-- First slide with project info -->
+                  <div class="carousel-slide info-slide">
+                    <div class="project-info">
+                      <h2>Gym Buddy Discord Bot</h2>
+                      <p>A discord bot that help with your fitness journey.</p>
+                      <h3>Coming Soon</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-<!-- Contact section -->
-<div id="contact">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-row">
+      </div>
+
+      <!-- Contact section -->
+      <div id="contact">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-row">
             <div class="contact-left">
-                <h3 class="sub-title">Contact Information</h3>
-                <p><i class="fas fa-paper-plane"></i> seepdrer0@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> 469-455-6805</p>
-                <p><i class="fas fa-map-marker-alt"></i> Dallas, Texas</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/psalms_po/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/see-pdrer/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/CookingGods" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="Resume.pdf" download class="btn">Download Resume</a>
+              <h3 class="sub-title">Contact Information</h3>
+              <p><i class="fas fa-paper-plane"></i> seepdrer0@gmail.com</p>
+              <p><i class="fas fa-phone-alt"></i> 469-455-6805</p>
+              <p><i class="fas fa-map-marker-alt"></i> Dallas, Texas</p>
+              <div class="social-icons">
+                <a
+                  href="https://www.instagram.com/psalms_po/"
+                  aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/see-pdrer/"
+                  aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="https://github.com/CookingGods" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+              <a href="See_Pdrer_Resume.pdf" download class="btn"
+                >Download SWE Resume</a
+              >
+              <a href="See_Pdrer_QAResume (1).pdf" download class="btn"
+                >Download QA Resume</a
+              >
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <span id="msg"></span>
+              <form name="submit-to-google-sheet">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+              <span id="msg"></span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
         <p>© 2025 See Pdrer. All Rights Reserved.</p>
         <div class="footer-links">
-            <a href="#header">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+          <a href="#header">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="code.js"></script>
-</body>
+    <script src="code.js"></script>
+  </body>
 </html>
